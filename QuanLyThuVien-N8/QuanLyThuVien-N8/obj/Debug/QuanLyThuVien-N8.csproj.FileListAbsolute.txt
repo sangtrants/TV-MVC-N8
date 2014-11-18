@@ -28,3 +28,31 @@ C:\Users\van\Google Drive\PTHTTTHD\Ex\Code\QuanLyThuVien-N8\QuanLyThuVien-N8\bin
 C:\Users\van\Google Drive\PTHTTTHD\Ex\Code\QuanLyThuVien-N8\QuanLyThuVien-N8\obj\Debug\QuanLyThuVien-N8.csprojResolveAssemblyReference.cache
 C:\Users\van\Google Drive\PTHTTTHD\Ex\Code\QuanLyThuVien-N8\QuanLyThuVien-N8\obj\Debug\QuanLyThuVien-N8.dll
 C:\Users\van\Google Drive\PTHTTTHD\Ex\Code\QuanLyThuVien-N8\QuanLyThuVien-N8\obj\Debug\QuanLyThuVien-N8.pdb
+C:\Users\K551\Documents\GitHub\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\bin\QuanLyThuVien-N8.dll
+C:\Users\K551\Documents\GitHub\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\bin\QuanLyThuVien-N8.pdb
+C:\Users\K551\Documents\GitHub\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\bin\Antlr3.Runtime.dll
+C:\Users\K551\Documents\GitHub\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\bin\EntityFramework.dll
+C:\Users\K551\Documents\GitHub\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\K551\Documents\GitHub\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\bin\Newtonsoft.Json.dll
+C:\Users\K551\Documents\GitHub\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\bin\System.Web.Mvc.dll
+C:\Users\K551\Documents\GitHub\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\bin\System.Web.Optimization.dll
+C:\Users\K551\Documents\GitHub\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\bin\System.Web.Providers.dll
+C:\Users\K551\Documents\GitHub\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\bin\System.Web.Razor.dll
+C:\Users\K551\Documents\GitHub\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\bin\System.Web.WebPages.Deployment.dll
+C:\Users\K551\Documents\GitHub\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\bin\System.Web.WebPages.dll
+C:\Users\K551\Documents\GitHub\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\bin\System.Web.WebPages.Razor.dll
+C:\Users\K551\Documents\GitHub\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\bin\WebGrease.dll
+C:\Users\K551\Documents\GitHub\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\bin\EntityFramework.xml
+C:\Users\K551\Documents\GitHub\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\bin\Newtonsoft.Json.xml
+C:\Users\K551\Documents\GitHub\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\bin\System.Web.Mvc.xml
+C:\Users\K551\Documents\GitHub\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\bin\System.Web.Razor.xml
+C:\Users\K551\Documents\GitHub\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\bin\System.Web.WebPages.xml
+C:\Users\K551\Documents\GitHub\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\bin\System.Web.WebPages.Deployment.xml
+C:\Users\K551\Documents\GitHub\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\bin\System.Web.WebPages.Razor.xml
+C:\Users\K551\Documents\GitHub\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\obj\Debug\QuanLyThuVien-N8.csprojResolveAssemblyReference.cache
+C:\Users\K551\Documents\GitHub\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\obj\Debug\QuanLyThuVien-N8.dll
+C:\Users\K551\Documents\GitHub\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\obj\Debug\QuanLyThuVien-N8.pdb
+C:\Users\K551\Documents\GitHub\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\bin\PagedList.dll
+C:\Users\K551\Documents\GitHub\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\bin\PagedList.Mvc.dll
+C:\Users\K551\Documents\GitHub\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\bin\PagedList.xml
+C:\Users\K551\Documents\GitHub\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\bin\PagedList.Mvc.xml
