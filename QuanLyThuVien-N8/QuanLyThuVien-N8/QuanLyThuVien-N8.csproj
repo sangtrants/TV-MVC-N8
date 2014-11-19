@@ -216,6 +216,24 @@
     <Content Include="Content\js\plugins\morris\morris.min.js" />
     <Content Include="Content\js\plugins\morris\raphael.min.js" />
     <Content Include="Content\js\sb-admin-2.js" />
+    <Content Include="Content\media-datatables\css\jquery.dataTables.css" />
+    <Content Include="Content\media-datatables\css\jquery.dataTables.min.css" />
+    <Content Include="Content\media-datatables\css\jquery.dataTables_themeroller.css" />
+    <Content Include="Content\media-datatables\images\back_disabled.png" />
+    <Content Include="Content\media-datatables\images\back_enabled.png" />
+    <Content Include="Content\media-datatables\images\back_enabled_hover.png" />
+    <Content Include="Content\media-datatables\images\favicon.ico" />
+    <Content Include="Content\media-datatables\images\forward_disabled.png" />
+    <Content Include="Content\media-datatables\images\forward_enabled.png" />
+    <Content Include="Content\media-datatables\images\forward_enabled_hover.png" />
+    <Content Include="Content\media-datatables\images\sort_asc.png" />
+    <Content Include="Content\media-datatables\images\sort_asc_disabled.png" />
+    <Content Include="Content\media-datatables\images\sort_both.png" />
+    <Content Include="Content\media-datatables\images\sort_desc.png" />
+    <Content Include="Content\media-datatables\images\sort_desc_disabled.png" />
+    <Content Include="Content\media-datatables\js\jquery.dataTables.js" />
+    <Content Include="Content\media-datatables\js\jquery.dataTables.min.js" />
+    <Content Include="Content\media-datatables\js\jquery.js" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -325,6 +343,7 @@
     <Content Include="Content\less\mixins.less" />
     <Content Include="Content\less\sb-admin-2.less" />
     <Content Include="Content\less\variables.less" />
+    <Content Include="Content\media-datatables\images\Sorting icons.psd" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
@@ -353,6 +372,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\ThuThu\Index.cshtml" />
+    <Content Include="Views\ThuThu\GetAllNguoiDung.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

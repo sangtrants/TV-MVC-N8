@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="QuanLyThuVienModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="QuanLyThuVienModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityContainer Name="QuanLyThuVienModelStoreContainer">
           <EntitySet Name="ChiTietDonHang" EntityType="QuanLyThuVienModel.Store.ChiTietDonHang" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ChiTietPhieuMuon" EntityType="QuanLyThuVienModel.Store.ChiTietPhieuMuon" store:Type="Tables" Schema="dbo" />
@@ -148,6 +148,7 @@
           <Property Name="LoaiND" Type="nvarchar" MaxLength="20" />
           <Property Name="TenDangNhap" Type="nvarchar" MaxLength="30" />
           <Property Name="MatKhau" Type="nvarchar" MaxLength="30" />
+          <Property Name="NgayDangKy" Type="date" />
         </EntityType>
         <EntityType Name="NhanVien">
           <Key>
@@ -195,7 +196,7 @@
           <Property Name="NgayMuon" Type="datetime" />
           <Property Name="NgayTra" Type="datetime" />
           <Property Name="SoLuongSach" Type="int" />
-          <Property Name="TinhTrangMuon" Type="bit" />
+          <Property Name="TinhTrangMuon" Type="int" />
         </EntityType>
         <EntityType Name="QuyDinhPhat">
           <Key>
@@ -393,8 +394,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QuanLyThuVienModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -552,6 +552,7 @@
           <Property Name="MatKhau" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="Gopies" Relationship="QuanLyThuVienModel.fk_Gopy_NguoiDung" FromRole="NguoiDung" ToRole="GopY" />
           <NavigationProperty Name="PhieuMuons" Relationship="QuanLyThuVienModel.fk_PhieuMuon_NguoiDung" FromRole="NguoiDung" ToRole="PhieuMuon" />
+          <Property Type="DateTime" Name="NgayDangKy" Precision="0" />
         </EntityType>
         <EntityType Name="NhanVien">
           <Key>
@@ -605,7 +606,7 @@
           <Property Name="NgayMuon" Type="DateTime" Precision="3" />
           <Property Name="NgayTra" Type="DateTime" Precision="3" />
           <Property Name="SoLuongSach" Type="Int32" />
-          <Property Name="TinhTrangMuon" Type="Boolean" />
+          <Property Name="TinhTrangMuon" Type="Int32" />
           <NavigationProperty Name="ChiTietPhieuMuons" Relationship="QuanLyThuVienModel.fk_CtPhieuMuon_PhieuMuon" FromRole="PhieuMuon" ToRole="ChiTietPhieuMuon" />
           <NavigationProperty Name="NguoiDung" Relationship="QuanLyThuVienModel.fk_PhieuMuon_NguoiDung" FromRole="PhieuMuon" ToRole="NguoiDung" />
           <NavigationProperty Name="NhanVien1" Relationship="QuanLyThuVienModel.fk_PhieuMuon_NhanVien" FromRole="PhieuMuon" ToRole="NhanVien" />
@@ -889,6 +890,7 @@
           <EntitySetMapping Name="NguoiDungs">
             <EntityTypeMapping TypeName="QuanLyThuVienModel.NguoiDung">
               <MappingFragment StoreEntitySet="NguoiDung">
+                <ScalarProperty Name="NgayDangKy" ColumnName="NgayDangKy" />
                 <ScalarProperty Name="MaNguoiDung" ColumnName="MaNguoiDung" />
                 <ScalarProperty Name="HoTen" ColumnName="HoTen" />
                 <ScalarProperty Name="SoCMND" ColumnName="SoCMND" />
