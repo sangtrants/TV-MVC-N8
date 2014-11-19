@@ -1,0 +1,119 @@
+﻿@model QuanLyThuVien_N8.Models.NguoiDung
+
+@{
+    ViewBag.Title = "Cập Nhật Độc Giả";
+    Layout = "~/Views/Shared/_Layout_admin.cshtml";
+}
+
+<h2>Cập Nhật Độc Giả</h2>
+
+@using (Html.BeginForm("suaDGIa","ThuThu",FormMethod.Post)) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>NguoiDung</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MaNguoiDung)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MaNguoiDung)
+            @Html.ValidationMessageFor(model => model.MaNguoiDung)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HoTen)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HoTen)
+            @Html.ValidationMessageFor(model => model.HoTen)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SoCMND)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SoCMND)
+            @Html.ValidationMessageFor(model => model.SoCMND)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NgaySinh)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NgaySinh)
+            @Html.ValidationMessageFor(model => model.NgaySinh)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MSSV)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MSSV)
+            @Html.ValidationMessageFor(model => model.MSSV)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NgayHetHan)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NgayHetHan)
+            @Html.ValidationMessageFor(model => model.NgayHetHan)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LoaiND)
+        </div>
+        <div class="editor-field">
+           
+            @*@Html.EditorFor(model => model.LoaiND)
+            @Html.ValidationMessageFor(model => model.LoaiND)*@
+            @Html.DropDownListFor(model => model.LoaiND, new SelectList(
+           new List<Object> { 
+           new{value="Sinh Viên Trường", text="Sinh Viên Trường"},
+           new{value="Cán Bộ Trường", text="Cán Bộ Trường"},
+           new{value="Sinh Viên Trường Khác", text="Sinh Viên Trường Khác"},
+           new{value="Cán Bộ Trường Khác", text="Cán Bộ Trường Khác"}
+           },
+           "value",
+           "text",
+           2))
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TenDangNhap)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TenDangNhap)
+            @Html.ValidationMessageFor(model => model.TenDangNhap)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MatKhau)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MatKhau)
+            @Html.ValidationMessageFor(model => model.MatKhau)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AnhDaiDien)
+        </div>
+        <div class="editor-field">
+            <img style="width:118px; height:118px" src="@Url.Content(@Model.AnhDaiDien)" />
+            
+        </div>
+
+        <div>@Html.ActionLink("Cập nhật hình ảnh", "capnhatAnh", new { id = Model.TenDangNhap })</div>
+
+        <p>
+            <input type="submit" value="Lưu" />
+        </p>
+    </fieldset>
+}
+
+<p>
+    @Html.ActionLink("Về trang tìm kiếm", "QLDGia")
+</p>
+

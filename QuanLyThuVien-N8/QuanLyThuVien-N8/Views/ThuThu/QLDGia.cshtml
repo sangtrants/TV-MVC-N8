@@ -1,0 +1,112 @@
+﻿@model IEnumerable<QuanLyThuVien_N8.Models.NguoiDung>
+
+@{
+    ViewBag.Title = "Quản Lý Độc Giả";
+    Layout = "~/Views/Shared/_Layout_admin.cshtml";
+}
+
+<script src="~/Scripts/jquery-1.7.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $("#TimKiem").submit(function () {
+
+
+            if (($("#TuKhoa").val() == "") && (($("#KieuTim").val() == "TenDG") || ($("#KieuTim").val() == "MaDG"))) {
+
+                alert("Vui lòng nhập từ khoá cần tìm kiếm!");
+                return false;
+            }
+
+        });
+    });
+
+</script>
+
+<h2>Quản Lý Độc Giả</h2>
+<form action="/thuthu/KQTKiem" method="post" id="TimKiem">
+    <table>
+        <tr>
+            <th style="width:200px; height:50px">
+                <p>
+                    @Html.ActionLink("Thêm Độc Giả", "themDGia")
+                </p>
+                <p>
+                    @Html.ActionLink("Quản Lý Hình Ảnh", "qlHinhAnh")
+                </p>
+            </th>
+            <th style="width:300px; height:50px">
+                Từ khóa: <input type="text" name="TuKhoa" id="TuKhoa" />
+            </th>
+            <th style="width:200px; height:50px">
+                Kiểu tìm:
+                <select name="KieuTim" id="KieuTim">
+                    <option value="TatCa">Tất Cả</option>
+                    <option value="TenDG">Tên Độc Giả</option>
+                    <option value="MaDG">Mã Độc Giả</option>
+                </select>
+            </th>
+            <th style="width:70px; height:50px">
+
+                <input type="submit" id="btnSearch" value="Tìm kiếm" />
+            </th>
+        </tr>
+    </table>
+</form>
+<div id="result">
+
+</div>
+@*<table>
+        <tr>
+            <th>
+                Họ Tên
+            </th>
+            <th>
+                CMND
+            </th>
+            <th>
+                Ngày Sinh
+            </th>
+            <th>
+                MSSV
+            </th>
+            <th>
+                Ngày Hết Hạn
+            </th>
+            <th>
+                Loại Người Dùng
+            </th>
+            <th></th>
+        </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td style="width:150px">
+                @Html.DisplayFor(modelItem => item.HoTen)
+            </td>
+            <td style="width:70px">
+                @Html.DisplayFor(modelItem => item.SoCMND)
+            </td>
+            <td style="width:200px">
+                @Html.DisplayFor(modelItem => item.NgaySinh)
+            </td>
+            <td style="width:70px">
+                @Html.DisplayFor(modelItem => item.MSSV)
+            </td>
+            <td style="width:200px">
+                @Html.DisplayFor(modelItem => item.NgayHetHan)
+            </td>
+            <td style="width:150px">
+                @Html.DisplayFor(modelItem => item.LoaiND)
+            </td>
+            <td>
+                @Html.ActionLink("Chỉnh Sửa", "suaDGia", new { /* id=item.PrimaryKey */ }) |
+
+                @Html.ActionLink("Xóa", "xoaDGia", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
+
+    </table>*@
+
+

@@ -1,0 +1,89 @@
+﻿@model QuanLyThuVien_N8.Models.NguoiDung
+
+@{
+    ViewBag.Title = "Chi Tiết Độc Giả";
+    Layout = "~/Views/Shared/_Layout_admin.cshtml";
+}
+
+<h2>Chi Tiết Độc Giả</h2>
+
+<fieldset>
+    <legend>Độc Giả</legend>
+
+    <div class="display-label">
+         Mã Người Dùng
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MaNguoiDung)
+    </div>
+    <br />
+    <div class="display-label">
+         Họ và Tên
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HoTen)
+    </div>
+    <br />
+    <div class="display-label">
+         CMND
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SoCMND)
+    </div>
+    <br />
+    <div class="display-label">
+         Ngày Sinh
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NgaySinh)
+    </div>
+    <br />
+    <div class="display-label">
+         MSSV
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MSSV)
+    </div>
+    <br />
+    <div class="display-label">
+         Ngày Hết Hạn
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NgayHetHan)
+    </div>
+    <br />
+    <div class="display-label">
+         Loại Người Dùng
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LoaiND)
+    </div>
+    <br />
+    <div class="display-label">
+         Tên Đăng Nhập
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TenDangNhap)
+    </div>
+    <br />
+    <div class="display-label">
+         Mật Khẩu
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MatKhau)
+    </div>
+    <br />
+    <div class="display-label">
+         Ảnh Đại Diện
+    </div>
+    <div class="display-field">
+        <img style="width:118px; height:118px" src="@Url.Content(@Model.AnhDaiDien)" />
+       
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Chỉnh Sửa", "suadg", new { id = @Model.MaNguoiDung }) |
+    @Html.ActionLink("Về trang tìm kiếm", "QLDGia")
+    <br />
+    <br />
+</p>
