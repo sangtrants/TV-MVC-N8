@@ -134,7 +134,7 @@
     <Key>
       <PropertyRef Name="MaNguoiDung" />
     </Key>
-    <Property Name="MaNguoiDung" Type="int" Nullable="false" />
+    <Property Name="MaNguoiDung" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="HoTen" Type="nvarchar" MaxLength="30" />
     <Property Name="SoCMND" Type="varchar" MaxLength="9" />
     <Property Name="NgaySinh" Type="date" />
@@ -143,6 +143,8 @@
     <Property Name="LoaiND" Type="nvarchar" MaxLength="20" />
     <Property Name="TenDangNhap" Type="nvarchar" MaxLength="30" />
     <Property Name="MatKhau" Type="nvarchar" MaxLength="30" />
+    <Property Name="AnhDaiDien" Type="nvarchar" MaxLength="100" />
+    <Property Name="NgayDangKy" Type="date" />
   </EntityType>
   <EntityType Name="NhanVien">
     <Key>
@@ -190,7 +192,7 @@
     <Property Name="NgayMuon" Type="datetime" />
     <Property Name="NgayTra" Type="datetime" />
     <Property Name="SoLuongSach" Type="int" />
-    <Property Name="TinhTrangMuon" Type="bit" />
+    <Property Name="TinhTrangMuon" Type="int" />
   </EntityType>
   <EntityType Name="QuyDinhPhat">
     <Key>
@@ -210,7 +212,7 @@
     <Property Name="NhanDePhu" Type="nvarchar" MaxLength="100" />
     <Property Name="NamXuatBan" Type="date" />
     <Property Name="TinhTrangSach" Type="nvarchar" MaxLength="100" />
-    <Property Name="TinhTrangMuon" Type="bit" />
+    <Property Name="TinhTrangMuon" Type="int" />
     <Property Name="GiaSach" Type="float" />
     <Property Name="KichThuoc" Type="nvarchar" MaxLength="12" />
     <Property Name="NgonNgu" Type="nvarchar" MaxLength="30" />

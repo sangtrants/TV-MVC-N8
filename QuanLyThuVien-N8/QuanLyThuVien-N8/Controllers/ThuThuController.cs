@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.IO;
 using QuanLyThuVien_N8.Models;
+using PagedList;
 
 namespace QuanLyThuVien_N8.Controllers
 {
@@ -183,6 +184,16 @@ namespace QuanLyThuVien_N8.Controllers
             QuanLyThuVienEntities data = new QuanLyThuVienEntities();
             List<NguoiDung> lst = (from ngd in data.NguoiDungs select ngd).ToList();
             return View(lst);
+        }
+
+        public ActionResult QuanLySach(int? page)
+        {
+            QuanLyThuVienEntities data = new QuanLyThuVienEntities();
+            var sach = from s in data.Saches select s;
+            sach = sach.OrderBy(s => s.MaSach);
+            int pageSize = 1;
+            int pageNumber = (page ?? 1);
+            return View(sach.ToPagedList(pageNumber, pageSize));
         }
     }
 }

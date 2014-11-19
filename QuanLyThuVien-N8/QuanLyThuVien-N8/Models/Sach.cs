@@ -25,7 +25,7 @@ namespace QuanLyThuVien_N8.Models
         public string NhanDePhu { get; set; }
         public Nullable<System.DateTime> NamXuatBan { get; set; }
         public string TinhTrangSach { get; set; }
-        public Nullable<bool> TinhTrangMuon { get; set; }
+        public Nullable<int> TinhTrangMuon { get; set; }
         public Nullable<double> GiaSach { get; set; }
         public string KichThuoc { get; set; }
         public string NgonNgu { get; set; }

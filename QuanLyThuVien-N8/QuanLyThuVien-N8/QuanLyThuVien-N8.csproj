@@ -192,6 +192,37 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\admin\css\bootstrap.css" />
+    <Content Include="Content\admin\css\bootstrap.min.css" />
+    <Content Include="Content\admin\css\plugins\dataTables.bootstrap.css" />
+    <Content Include="Content\admin\css\plugins\metisMenu\metisMenu.css" />
+    <Content Include="Content\admin\css\plugins\metisMenu\metisMenu.min.css" />
+    <Content Include="Content\admin\css\plugins\morris.css" />
+    <Content Include="Content\admin\css\plugins\social-buttons.css" />
+    <Content Include="Content\admin\css\plugins\timeline.css" />
+    <Content Include="Content\admin\css\sb-admin-2.css" />
+    <Content Include="Content\admin\font-awesome-4.1.0\css\font-awesome.css" />
+    <Content Include="Content\admin\font-awesome-4.1.0\css\font-awesome.min.css" />
+    <Content Include="Content\admin\font-awesome-4.1.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\admin\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\admin\js\bootstrap.js" />
+    <Content Include="Content\admin\js\bootstrap.min.js" />
+    <Content Include="Content\admin\js\jquery.js" />
+    <Content Include="Content\admin\js\plugins\dataTables\dataTables.bootstrap.js" />
+    <Content Include="Content\admin\js\plugins\dataTables\jquery.dataTables.js" />
+    <Content Include="Content\admin\js\plugins\flot\excanvas.min.js" />
+    <Content Include="Content\admin\js\plugins\flot\flot-data.js" />
+    <Content Include="Content\admin\js\plugins\flot\jquery.flot.js" />
+    <Content Include="Content\admin\js\plugins\flot\jquery.flot.pie.js" />
+    <Content Include="Content\admin\js\plugins\flot\jquery.flot.resize.js" />
+    <Content Include="Content\admin\js\plugins\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="Content\admin\js\plugins\metisMenu\metisMenu.js" />
+    <Content Include="Content\admin\js\plugins\metisMenu\metisMenu.min.js" />
+    <Content Include="Content\admin\js\plugins\morris\morris-data.js" />
+    <Content Include="Content\admin\js\plugins\morris\morris.js" />
+    <Content Include="Content\admin\js\plugins\morris\morris.min.js" />
+    <Content Include="Content\admin\js\plugins\morris\raphael.min.js" />
+    <Content Include="Content\admin\js\sb-admin-2.js" />
     <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\plugins\dataTables.bootstrap.css" />
@@ -205,6 +236,67 @@
     <Content Include="Content\font-awesome-4.1.0\css\font-awesome.min.css" />
     <Content Include="Content\font-awesome-4.1.0\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\home\css\bootstrap-responsive.css" />
+    <Content Include="Content\home\css\bootstrap.css" />
+    <Content Include="Content\home\css\custom-styles.css" />
+    <Content Include="Content\home\css\flexslider.css" />
+    <Content Include="Content\home\css\prettyPhoto.css" />
+    <Content Include="Content\home\css\style-ie.css" />
+    <Content Include="Content\home\img\apple-touch-icon-114x114.png" />
+    <Content Include="Content\home\img\apple-touch-icon-72x72.png" />
+    <Content Include="Content\home\img\apple-touch-icon.png" />
+    <Content Include="Content\home\img\author-avatar.jpg" />
+    <Content Include="Content\home\img\back-top-btn.png" />
+    <Content Include="Content\home\img\bg_direction_nav.png" />
+    <Content Include="Content\home\img\container-bg.png" />
+    <Content Include="Content\home\img\favicon.ico" />
+    <Content Include="Content\home\img\gallery-item-hover.png" />
+    <Content Include="Content\home\img\gallery-item-icons.png" />
+    <Content Include="Content\home\img\gallery\blog-med-img-1.jpg" />
+    <Content Include="Content\home\img\gallery\client-img-1.png" />
+    <Content Include="Content\home\img\gallery\client-img-2.png" />
+    <Content Include="Content\home\img\gallery\client-img-3.png" />
+    <Content Include="Content\home\img\gallery\client-img-4.png" />
+    <Content Include="Content\home\img\gallery\client-img-5.png" />
+    <Content Include="Content\home\img\gallery\flickr-img-1.jpg" />
+    <Content Include="Content\home\img\gallery\gallery-img-1-3col.jpg" />
+    <Content Include="Content\home\img\gallery\gallery-img-1-4col-cir.jpg" />
+    <Content Include="Content\home\img\gallery\gallery-img-1-4col.jpg" />
+    <Content Include="Content\home\img\gallery\gallery-img-1-6col.jpg" />
+    <Content Include="Content\home\img\gallery\gallery-img-1-full.jpg" />
+    <Content Include="Content\home\img\gallery\gallery-img-13-6col.jpg" />
+    <Content Include="Content\home\img\gallery\gallery-img-14-6col.jpg" />
+    <Content Include="Content\home\img\gallery\gallery-img-2-thumb.jpg" />
+    <Content Include="Content\home\img\gallery\post-img-1.jpg" />
+    <Content Include="Content\home\img\gallery\slider-img-1.jpg" />
+    <Content Include="Content\home\img\gallery\thumbnail-270x130.jpg" />
+    <Content Include="Content\home\img\gallery\thumbnail-270x300.jpg" />
+    <Content Include="Content\home\img\glyphicons-halflings-white.png" />
+    <Content Include="Content\home\img\glyphicons-halflings.png" />
+    <Content Include="Content\home\img\location-map.jpg" />
+    <Content Include="Content\home\img\logo-khtn.png" />
+    <Content Include="Content\home\img\page-bg-1.jpg" />
+    <Content Include="Content\home\img\piccolo-footer-logo.png" />
+    <Content Include="Content\home\img\piccolo-logo.png" />
+    <Content Include="Content\home\img\post-item-hover.png" />
+    <Content Include="Content\home\img\prettyPhoto\default\default_thumb.png" />
+    <Content Include="Content\home\img\prettyPhoto\default\loader.gif" />
+    <Content Include="Content\home\img\prettyPhoto\default\sprite.png" />
+    <Content Include="Content\home\img\prettyPhoto\default\sprite_next.png" />
+    <Content Include="Content\home\img\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="Content\home\img\prettyPhoto\default\sprite_x.png" />
+    <Content Include="Content\home\img\prettyPhoto\default\sprite_y.png" />
+    <Content Include="Content\home\img\rnd-client-mask.png" />
+    <Content Include="Content\home\img\slider-caption-bg.png" />
+    <Content Include="Content\home\img\slider-img-1.jpg" />
+    <Content Include="Content\home\img\social-icons.png" />
+    <Content Include="Content\home\img\user-avatar.jpg" />
+    <Content Include="Content\home\js\bootstrap.js" />
+    <Content Include="Content\home\js\jquery.custom.js" />
+    <Content Include="Content\home\js\jquery.easing.1.3.js" />
+    <Content Include="Content\home\js\jquery.flexslider.js" />
+    <Content Include="Content\home\js\jquery.prettyPhoto.js" />
+    <Content Include="Content\home\js\jquery.quicksand.js" />
     <Content Include="Content\js\bootstrap.js" />
     <Content Include="Content\js\bootstrap.min.js" />
     <Content Include="Content\js\jquery.js" />
@@ -302,6 +394,13 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>QuanLyThuVien.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <Content Include="Images\0888741.png" />
+    <Content Include="Images\1112323.png" />
+    <Content Include="Images\1112345.png" />
+    <Content Include="Images\1212.png" />
+    <Content Include="Images\54354.png" />
+    <Content Include="Images\p10164240.png" />
+    <Content Include="Images\p190871.png" />
     <Content Include="Models\QuanLyThuVien.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>QuanLyThuVien.edmx</DependentUpon>
@@ -352,6 +451,58 @@
     <Content Include="Content\less\sb-admin-2.less" />
     <Content Include="Content\less\variables.less" />
     <Content Include="Content\media-datatables\images\Sorting icons.psd" />
+    <Content Include="Content\admin\css\desktop.ini" />
+    <Content Include="Content\admin\css\plugins\desktop.ini" />
+    <Content Include="Content\admin\css\plugins\metisMenu\desktop.ini" />
+    <Content Include="Content\admin\font-awesome-4.1.0\css\desktop.ini" />
+    <Content Include="Content\admin\font-awesome-4.1.0\desktop.ini" />
+    <Content Include="Content\admin\font-awesome-4.1.0\fonts\desktop.ini" />
+    <Content Include="Content\admin\font-awesome-4.1.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\admin\font-awesome-4.1.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\admin\font-awesome-4.1.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\admin\font-awesome-4.1.0\fonts\FontAwesome.otf" />
+    <Content Include="Content\admin\font-awesome-4.1.0\less\bordered-pulled.less" />
+    <Content Include="Content\admin\font-awesome-4.1.0\less\core.less" />
+    <Content Include="Content\admin\font-awesome-4.1.0\less\desktop.ini" />
+    <Content Include="Content\admin\font-awesome-4.1.0\less\fixed-width.less" />
+    <Content Include="Content\admin\font-awesome-4.1.0\less\font-awesome.less" />
+    <Content Include="Content\admin\font-awesome-4.1.0\less\icons.less" />
+    <Content Include="Content\admin\font-awesome-4.1.0\less\larger.less" />
+    <Content Include="Content\admin\font-awesome-4.1.0\less\list.less" />
+    <Content Include="Content\admin\font-awesome-4.1.0\less\mixins.less" />
+    <Content Include="Content\admin\font-awesome-4.1.0\less\path.less" />
+    <Content Include="Content\admin\font-awesome-4.1.0\less\rotated-flipped.less" />
+    <Content Include="Content\admin\font-awesome-4.1.0\less\spinning.less" />
+    <Content Include="Content\admin\font-awesome-4.1.0\less\stacked.less" />
+    <Content Include="Content\admin\font-awesome-4.1.0\less\variables.less" />
+    <Content Include="Content\admin\font-awesome-4.1.0\scss\desktop.ini" />
+    <Content Include="Content\admin\font-awesome-4.1.0\scss\font-awesome.scss" />
+    <Content Include="Content\admin\font-awesome-4.1.0\scss\_bordered-pulled.scss" />
+    <Content Include="Content\admin\font-awesome-4.1.0\scss\_core.scss" />
+    <Content Include="Content\admin\font-awesome-4.1.0\scss\_fixed-width.scss" />
+    <Content Include="Content\admin\font-awesome-4.1.0\scss\_icons.scss" />
+    <Content Include="Content\admin\font-awesome-4.1.0\scss\_larger.scss" />
+    <Content Include="Content\admin\font-awesome-4.1.0\scss\_list.scss" />
+    <Content Include="Content\admin\font-awesome-4.1.0\scss\_mixins.scss" />
+    <Content Include="Content\admin\font-awesome-4.1.0\scss\_path.scss" />
+    <Content Include="Content\admin\font-awesome-4.1.0\scss\_rotated-flipped.scss" />
+    <Content Include="Content\admin\font-awesome-4.1.0\scss\_spinning.scss" />
+    <Content Include="Content\admin\font-awesome-4.1.0\scss\_stacked.scss" />
+    <Content Include="Content\admin\font-awesome-4.1.0\scss\_variables.scss" />
+    <Content Include="Content\admin\fonts\desktop.ini" />
+    <Content Include="Content\admin\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\admin\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\admin\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\admin\js\desktop.ini" />
+    <Content Include="Content\admin\js\plugins\dataTables\desktop.ini" />
+    <Content Include="Content\admin\js\plugins\desktop.ini" />
+    <Content Include="Content\admin\js\plugins\flot\desktop.ini" />
+    <Content Include="Content\admin\js\plugins\metisMenu\desktop.ini" />
+    <Content Include="Content\admin\js\plugins\morris\desktop.ini" />
+    <Content Include="Content\admin\less\desktop.ini" />
+    <Content Include="Content\admin\less\mixins.less" />
+    <Content Include="Content\admin\less\sb-admin-2.less" />
+    <Content Include="Content\admin\less\variables.less" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
@@ -386,6 +537,15 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\Demo.cshtml" />
+    <Content Include="Views\ThuThu\suaDGia.cshtml" />
+    <Content Include="Views\ThuThu\themDGia.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\ThuThu\qlHinhAnh.cshtml" />
+    <Content Include="Views\ThuThu\QLDGia.cshtml" />
+    <Content Include="Views\ThuThu\KQTKiem.cshtml" />
+    <Content Include="Views\ThuThu\chitietDGia.cshtml" />
+    <Content Include="Views\ThuThu\capnhatAnh.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -412,7 +572,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>28487</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:31809/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

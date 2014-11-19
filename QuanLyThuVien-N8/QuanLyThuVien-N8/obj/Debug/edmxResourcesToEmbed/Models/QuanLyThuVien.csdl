@@ -10,9 +10,7 @@
     <EntitySet Name="NhanViens" EntityType="QuanLyThuVienModel.NhanVien" />
     <EntitySet Name="NhaXuatBans" EntityType="QuanLyThuVienModel.NhaXuatBan" />
     <EntitySet Name="Phats" EntityType="QuanLyThuVienModel.Phat" />
-    <EntitySet Name="PhieuMuons" EntityType="QuanLyThuVienModel.PhieuMuon" />
     <EntitySet Name="QuyDinhPhats" EntityType="QuanLyThuVienModel.QuyDinhPhat" />
-    <EntitySet Name="Saches" EntityType="QuanLyThuVienModel.Sach" />
     <EntitySet Name="TacGias" EntityType="QuanLyThuVienModel.TacGia" />
     <AssociationSet Name="fk_ChiTietDonHang_DonHang" Association="QuanLyThuVienModel.fk_ChiTietDonHang_DonHang">
       <End Role="DonHang" EntitySet="DonHangs" />
@@ -22,21 +20,9 @@
       <End Role="NhaXuatBan" EntitySet="NhaXuatBans" />
       <End Role="ChiTietDonHang" EntitySet="ChiTietDonHangs" />
     </AssociationSet>
-    <AssociationSet Name="fk_CtPhieuMuon_PhieuMuon" Association="QuanLyThuVienModel.fk_CtPhieuMuon_PhieuMuon">
-      <End Role="PhieuMuon" EntitySet="PhieuMuons" />
-      <End Role="ChiTietPhieuMuon" EntitySet="ChiTietPhieuMuons" />
-    </AssociationSet>
-    <AssociationSet Name="fk_CtPhieuMuon_Sach" Association="QuanLyThuVienModel.fk_CtPhieuMuon_Sach">
-      <End Role="Sach" EntitySet="Saches" />
-      <End Role="ChiTietPhieuMuon" EntitySet="ChiTietPhieuMuons" />
-    </AssociationSet>
     <AssociationSet Name="fk_Phat_CTPhieuMuon" Association="QuanLyThuVienModel.fk_Phat_CTPhieuMuon">
       <End Role="ChiTietPhieuMuon" EntitySet="ChiTietPhieuMuons" />
       <End Role="Phat" EntitySet="Phats" />
-    </AssociationSet>
-    <AssociationSet Name="fk_Sach_DanhMuc" Association="QuanLyThuVienModel.fk_Sach_DanhMuc">
-      <End Role="DanhMuc" EntitySet="DanhMucs" />
-      <End Role="Sach" EntitySet="Saches" />
     </AssociationSet>
     <AssociationSet Name="fk_DonHang_NhanVien" Association="QuanLyThuVienModel.fk_DonHang_NhanVien">
       <End Role="NhanVien" EntitySet="NhanViens" />
@@ -45,6 +31,24 @@
     <AssociationSet Name="fk_Gopy_NguoiDung" Association="QuanLyThuVienModel.fk_Gopy_NguoiDung">
       <End Role="NguoiDung" EntitySet="NguoiDungs" />
       <End Role="GopY" EntitySet="Gopies" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Phat_QDPhat" Association="QuanLyThuVienModel.fk_Phat_QDPhat">
+      <End Role="QuyDinhPhat" EntitySet="QuyDinhPhats" />
+      <End Role="Phat" EntitySet="Phats" />
+    </AssociationSet>
+    <EntitySet Name="PhieuMuons" EntityType="QuanLyThuVienModel.PhieuMuon" />
+    <EntitySet Name="Saches" EntityType="QuanLyThuVienModel.Sach" />
+    <AssociationSet Name="fk_CtPhieuMuon_PhieuMuon" Association="QuanLyThuVienModel.fk_CtPhieuMuon_PhieuMuon">
+      <End Role="PhieuMuon" EntitySet="PhieuMuons" />
+      <End Role="ChiTietPhieuMuon" EntitySet="ChiTietPhieuMuons" />
+    </AssociationSet>
+    <AssociationSet Name="fk_CtPhieuMuon_Sach" Association="QuanLyThuVienModel.fk_CtPhieuMuon_Sach">
+      <End Role="Sach" EntitySet="Saches" />
+      <End Role="ChiTietPhieuMuon" EntitySet="ChiTietPhieuMuons" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Sach_DanhMuc" Association="QuanLyThuVienModel.fk_Sach_DanhMuc">
+      <End Role="DanhMuc" EntitySet="DanhMucs" />
+      <End Role="Sach" EntitySet="Saches" />
     </AssociationSet>
     <AssociationSet Name="fk_PhieuMuon_NguoiDung" Association="QuanLyThuVienModel.fk_PhieuMuon_NguoiDung">
       <End Role="NguoiDung" EntitySet="NguoiDungs" />
@@ -57,10 +61,6 @@
     <AssociationSet Name="fk_Sach_NhaXuatBan" Association="QuanLyThuVienModel.fk_Sach_NhaXuatBan">
       <End Role="NhaXuatBan" EntitySet="NhaXuatBans" />
       <End Role="Sach" EntitySet="Saches" />
-    </AssociationSet>
-    <AssociationSet Name="fk_Phat_QDPhat" Association="QuanLyThuVienModel.fk_Phat_QDPhat">
-      <End Role="QuyDinhPhat" EntitySet="QuyDinhPhats" />
-      <End Role="Phat" EntitySet="Phats" />
     </AssociationSet>
     <AssociationSet Name="fk_Sach_TacGia" Association="QuanLyThuVienModel.fk_Sach_TacGia">
       <End Role="TacGia" EntitySet="TacGias" />
@@ -103,9 +103,9 @@
     <Property Name="NgayTra" Type="DateTime" Precision="3" />
     <Property Name="NgayMuon" Type="DateTime" Precision="3" />
     <Property Name="LanMuon" Type="Int32" />
+    <NavigationProperty Name="Phats" Relationship="QuanLyThuVienModel.fk_Phat_CTPhieuMuon" FromRole="ChiTietPhieuMuon" ToRole="Phat" />
     <NavigationProperty Name="PhieuMuon" Relationship="QuanLyThuVienModel.fk_CtPhieuMuon_PhieuMuon" FromRole="ChiTietPhieuMuon" ToRole="PhieuMuon" />
     <NavigationProperty Name="Sach" Relationship="QuanLyThuVienModel.fk_CtPhieuMuon_Sach" FromRole="ChiTietPhieuMuon" ToRole="Sach" />
-    <NavigationProperty Name="Phats" Relationship="QuanLyThuVienModel.fk_Phat_CTPhieuMuon" FromRole="ChiTietPhieuMuon" ToRole="Phat" />
   </EntityType>
   <EntityType Name="DanhMuc">
     <Key>
@@ -153,6 +153,8 @@
     <Property Name="TenDangNhap" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
     <Property Name="MatKhau" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="Gopies" Relationship="QuanLyThuVienModel.fk_Gopy_NguoiDung" FromRole="NguoiDung" ToRole="GopY" />
+    <Property Name="NgayDangKy" Precision="0" Type="DateTime" />
+    <Property Type="String" Name="AnhDaiDien" MaxLength="100" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="PhieuMuons" Relationship="QuanLyThuVienModel.fk_PhieuMuon_NguoiDung" FromRole="NguoiDung" ToRole="PhieuMuon" />
   </EntityType>
   <EntityType Name="NhanVien">
@@ -197,21 +199,6 @@
     <NavigationProperty Name="ChiTietPhieuMuon1" Relationship="QuanLyThuVienModel.fk_Phat_CTPhieuMuon" FromRole="Phat" ToRole="ChiTietPhieuMuon" />
     <NavigationProperty Name="QuyDinhPhat1" Relationship="QuanLyThuVienModel.fk_Phat_QDPhat" FromRole="Phat" ToRole="QuyDinhPhat" />
   </EntityType>
-  <EntityType Name="PhieuMuon">
-    <Key>
-      <PropertyRef Name="MaPhieuMuon" />
-    </Key>
-    <Property Name="MaPhieuMuon" Type="Int32" Nullable="false" />
-    <Property Name="NhanVien" Type="Int32" />
-    <Property Name="NguoiMuon" Type="Int32" />
-    <Property Name="NgayMuon" Type="DateTime" Precision="3" />
-    <Property Name="NgayTra" Type="DateTime" Precision="3" />
-    <Property Name="SoLuongSach" Type="Int32" />
-    <Property Name="TinhTrangMuon" Type="Boolean" />
-    <NavigationProperty Name="ChiTietPhieuMuons" Relationship="QuanLyThuVienModel.fk_CtPhieuMuon_PhieuMuon" FromRole="PhieuMuon" ToRole="ChiTietPhieuMuon" />
-    <NavigationProperty Name="NguoiDung" Relationship="QuanLyThuVienModel.fk_PhieuMuon_NguoiDung" FromRole="PhieuMuon" ToRole="NguoiDung" />
-    <NavigationProperty Name="NhanVien1" Relationship="QuanLyThuVienModel.fk_PhieuMuon_NhanVien" FromRole="PhieuMuon" ToRole="NhanVien" />
-  </EntityType>
   <EntityType Name="QuyDinhPhat">
     <Key>
       <PropertyRef Name="MaQuyDinhPhat" />
@@ -220,32 +207,6 @@
     <Property Name="MoTa" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
     <Property Name="SoTien" Type="Double" />
     <NavigationProperty Name="Phats" Relationship="QuanLyThuVienModel.fk_Phat_QDPhat" FromRole="QuyDinhPhat" ToRole="Phat" />
-  </EntityType>
-  <EntityType Name="Sach">
-    <Key>
-      <PropertyRef Name="MaSach" />
-    </Key>
-    <Property Name="MaSach" Type="Int32" Nullable="false" />
-    <Property Name="TenSach" Type="String" MaxLength="70" Unicode="true" FixedLength="false" />
-    <Property Name="NhanDeChinh" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
-    <Property Name="NhanDePhu" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
-    <Property Name="NamXuatBan" Type="DateTime" Precision="0" />
-    <Property Name="TinhTrangSach" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
-    <Property Name="TinhTrangMuon" Type="Boolean" />
-    <Property Name="GiaSach" Type="Double" />
-    <Property Name="KichThuoc" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
-    <Property Name="NgonNgu" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
-    <Property Name="Cuon" Type="Int32" />
-    <Property Name="Tap" Type="Int32" />
-    <Property Name="XemTruoc" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
-    <Property Name="TomTat" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
-    <Property Name="TacGia" Type="Int32" />
-    <Property Name="NhaXuatBan" Type="Int32" />
-    <Property Name="MaDanhMuc" Type="Int32" />
-    <NavigationProperty Name="ChiTietPhieuMuons" Relationship="QuanLyThuVienModel.fk_CtPhieuMuon_Sach" FromRole="Sach" ToRole="ChiTietPhieuMuon" />
-    <NavigationProperty Name="DanhMuc" Relationship="QuanLyThuVienModel.fk_Sach_DanhMuc" FromRole="Sach" ToRole="DanhMuc" />
-    <NavigationProperty Name="NhaXuatBan1" Relationship="QuanLyThuVienModel.fk_Sach_NhaXuatBan" FromRole="Sach" ToRole="NhaXuatBan" />
-    <NavigationProperty Name="TacGia1" Relationship="QuanLyThuVienModel.fk_Sach_TacGia" FromRole="Sach" ToRole="TacGia" />
   </EntityType>
   <EntityType Name="TacGia">
     <Key>
@@ -282,30 +243,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="fk_CtPhieuMuon_PhieuMuon">
-    <End Role="PhieuMuon" Type="QuanLyThuVienModel.PhieuMuon" Multiplicity="0..1" />
-    <End Role="ChiTietPhieuMuon" Type="QuanLyThuVienModel.ChiTietPhieuMuon" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="PhieuMuon">
-        <PropertyRef Name="MaPhieuMuon" />
-      </Principal>
-      <Dependent Role="ChiTietPhieuMuon">
-        <PropertyRef Name="MaPhieuMuon" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="fk_CtPhieuMuon_Sach">
-    <End Role="Sach" Type="QuanLyThuVienModel.Sach" Multiplicity="0..1" />
-    <End Role="ChiTietPhieuMuon" Type="QuanLyThuVienModel.ChiTietPhieuMuon" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Sach">
-        <PropertyRef Name="MaSach" />
-      </Principal>
-      <Dependent Role="ChiTietPhieuMuon">
-        <PropertyRef Name="MaSach" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="fk_Phat_CTPhieuMuon">
     <End Role="ChiTietPhieuMuon" Type="QuanLyThuVienModel.ChiTietPhieuMuon" Multiplicity="0..1" />
     <End Role="Phat" Type="QuanLyThuVienModel.Phat" Multiplicity="*" />
@@ -315,18 +252,6 @@
       </Principal>
       <Dependent Role="Phat">
         <PropertyRef Name="ChiTietPhieuMuon" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="fk_Sach_DanhMuc">
-    <End Role="DanhMuc" Type="QuanLyThuVienModel.DanhMuc" Multiplicity="0..1" />
-    <End Role="Sach" Type="QuanLyThuVienModel.Sach" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="DanhMuc">
-        <PropertyRef Name="MaDanhMuc" />
-      </Principal>
-      <Dependent Role="Sach">
-        <PropertyRef Name="MaDanhMuc" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -354,42 +279,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="fk_PhieuMuon_NguoiDung">
-    <End Role="NguoiDung" Type="QuanLyThuVienModel.NguoiDung" Multiplicity="0..1" />
-    <End Role="PhieuMuon" Type="QuanLyThuVienModel.PhieuMuon" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="NguoiDung">
-        <PropertyRef Name="MaNguoiDung" />
-      </Principal>
-      <Dependent Role="PhieuMuon">
-        <PropertyRef Name="NguoiMuon" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="fk_PhieuMuon_NhanVien">
-    <End Role="NhanVien" Type="QuanLyThuVienModel.NhanVien" Multiplicity="0..1" />
-    <End Role="PhieuMuon" Type="QuanLyThuVienModel.PhieuMuon" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="NhanVien">
-        <PropertyRef Name="MaNhanVien" />
-      </Principal>
-      <Dependent Role="PhieuMuon">
-        <PropertyRef Name="NhanVien" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="fk_Sach_NhaXuatBan">
-    <End Role="NhaXuatBan" Type="QuanLyThuVienModel.NhaXuatBan" Multiplicity="0..1" />
-    <End Role="Sach" Type="QuanLyThuVienModel.Sach" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="NhaXuatBan">
-        <PropertyRef Name="MaNhaXuatBan" />
-      </Principal>
-      <Dependent Role="Sach">
-        <PropertyRef Name="NhaXuatBan" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="fk_Phat_QDPhat">
     <End Role="QuyDinhPhat" Type="QuanLyThuVienModel.QuyDinhPhat" Multiplicity="0..1" />
     <End Role="Phat" Type="QuanLyThuVienModel.Phat" Multiplicity="*" />
@@ -402,9 +291,122 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="PhieuMuon">
+    <Key>
+      <PropertyRef Name="MaPhieuMuon" />
+    </Key>
+    <Property Type="Int32" Name="MaPhieuMuon" Nullable="false" />
+    <Property Type="Int32" Name="NhanVien" />
+    <Property Type="Int32" Name="NguoiMuon" />
+    <Property Type="DateTime" Name="NgayMuon" Precision="3" />
+    <Property Type="DateTime" Name="NgayTra" Precision="3" />
+    <Property Type="Int32" Name="SoLuongSach" />
+    <Property Type="Int32" Name="TinhTrangMuon" />
+    <NavigationProperty Name="ChiTietPhieuMuons" Relationship="QuanLyThuVienModel.fk_CtPhieuMuon_PhieuMuon" FromRole="PhieuMuon" ToRole="ChiTietPhieuMuon" />
+    <NavigationProperty Name="NguoiDung" Relationship="QuanLyThuVienModel.fk_PhieuMuon_NguoiDung" FromRole="PhieuMuon" ToRole="NguoiDung" />
+    <NavigationProperty Name="NhanVien1" Relationship="QuanLyThuVienModel.fk_PhieuMuon_NhanVien" FromRole="PhieuMuon" ToRole="NhanVien" />
+  </EntityType>
+  <EntityType Name="Sach">
+    <Key>
+      <PropertyRef Name="MaSach" />
+    </Key>
+    <Property Type="Int32" Name="MaSach" Nullable="false" />
+    <Property Type="String" Name="TenSach" MaxLength="70" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NhanDeChinh" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NhanDePhu" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="NamXuatBan" Precision="0" />
+    <Property Type="String" Name="TinhTrangSach" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="TinhTrangMuon" />
+    <Property Type="Double" Name="GiaSach" />
+    <Property Type="String" Name="KichThuoc" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NgonNgu" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Cuon" />
+    <Property Type="Int32" Name="Tap" />
+    <Property Type="String" Name="XemTruoc" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TomTat" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="TacGia" />
+    <Property Type="Int32" Name="NhaXuatBan" />
+    <Property Type="Int32" Name="MaDanhMuc" />
+    <NavigationProperty Name="ChiTietPhieuMuons" Relationship="QuanLyThuVienModel.fk_CtPhieuMuon_Sach" FromRole="Sach" ToRole="ChiTietPhieuMuon" />
+    <NavigationProperty Name="DanhMuc" Relationship="QuanLyThuVienModel.fk_Sach_DanhMuc" FromRole="Sach" ToRole="DanhMuc" />
+    <NavigationProperty Name="NhaXuatBan1" Relationship="QuanLyThuVienModel.fk_Sach_NhaXuatBan" FromRole="Sach" ToRole="NhaXuatBan" />
+    <NavigationProperty Name="TacGia1" Relationship="QuanLyThuVienModel.fk_Sach_TacGia" FromRole="Sach" ToRole="TacGia" />
+  </EntityType>
+  <Association Name="fk_CtPhieuMuon_PhieuMuon">
+    <End Type="QuanLyThuVienModel.PhieuMuon" Role="PhieuMuon" Multiplicity="0..1" />
+    <End Type="QuanLyThuVienModel.ChiTietPhieuMuon" Role="ChiTietPhieuMuon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PhieuMuon">
+        <PropertyRef Name="MaPhieuMuon" />
+      </Principal>
+      <Dependent Role="ChiTietPhieuMuon">
+        <PropertyRef Name="MaPhieuMuon" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_CtPhieuMuon_Sach">
+    <End Type="QuanLyThuVienModel.Sach" Role="Sach" Multiplicity="0..1" />
+    <End Type="QuanLyThuVienModel.ChiTietPhieuMuon" Role="ChiTietPhieuMuon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sach">
+        <PropertyRef Name="MaSach" />
+      </Principal>
+      <Dependent Role="ChiTietPhieuMuon">
+        <PropertyRef Name="MaSach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Sach_DanhMuc">
+    <End Type="QuanLyThuVienModel.DanhMuc" Role="DanhMuc" Multiplicity="0..1" />
+    <End Type="QuanLyThuVienModel.Sach" Role="Sach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DanhMuc">
+        <PropertyRef Name="MaDanhMuc" />
+      </Principal>
+      <Dependent Role="Sach">
+        <PropertyRef Name="MaDanhMuc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_PhieuMuon_NguoiDung">
+    <End Type="QuanLyThuVienModel.NguoiDung" Role="NguoiDung" Multiplicity="0..1" />
+    <End Type="QuanLyThuVienModel.PhieuMuon" Role="PhieuMuon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NguoiDung">
+        <PropertyRef Name="MaNguoiDung" />
+      </Principal>
+      <Dependent Role="PhieuMuon">
+        <PropertyRef Name="NguoiMuon" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_PhieuMuon_NhanVien">
+    <End Type="QuanLyThuVienModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+    <End Type="QuanLyThuVienModel.PhieuMuon" Role="PhieuMuon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="MaNhanVien" />
+      </Principal>
+      <Dependent Role="PhieuMuon">
+        <PropertyRef Name="NhanVien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Sach_NhaXuatBan">
+    <End Type="QuanLyThuVienModel.NhaXuatBan" Role="NhaXuatBan" Multiplicity="0..1" />
+    <End Type="QuanLyThuVienModel.Sach" Role="Sach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhaXuatBan">
+        <PropertyRef Name="MaNhaXuatBan" />
+      </Principal>
+      <Dependent Role="Sach">
+        <PropertyRef Name="NhaXuatBan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="fk_Sach_TacGia">
-    <End Role="TacGia" Type="QuanLyThuVienModel.TacGia" Multiplicity="0..1" />
-    <End Role="Sach" Type="QuanLyThuVienModel.Sach" Multiplicity="*" />
+    <End Type="QuanLyThuVienModel.TacGia" Role="TacGia" Multiplicity="0..1" />
+    <End Type="QuanLyThuVienModel.Sach" Role="Sach" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TacGia">
         <PropertyRef Name="MaTacGia" />
