@@ -56,3 +56,5 @@ C:\Users\K551\Documents\GitHub\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\bin\P
 C:\Users\K551\Documents\GitHub\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\bin\PagedList.Mvc.dll
 C:\Users\K551\Documents\GitHub\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\bin\PagedList.xml
 C:\Users\K551\Documents\GitHub\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\bin\PagedList.Mvc.xml
+C:\Users\K551\Documents\GitHub\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\bin\BarcodeLib.Barcode.ASP.NET.dll
+C:\Users\K551\Documents\GitHub\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\bin\BarcodeLib.BarcodeReader.dll

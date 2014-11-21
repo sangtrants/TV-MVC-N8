@@ -39,6 +39,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BarcodeLib.Barcode.ASP.NET">
+      <HintPath>..\..\..\..\..\Downloads\QuanLyThuVien-N8\QuanLyThuVien-N8\bin\BarcodeLib.Barcode.ASP.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="BarcodeLib.BarcodeReader">
+      <HintPath>..\..\..\..\..\Downloads\QuanLyThuVien-N8\QuanLyThuVien-N8\bin\BarcodeLib.BarcodeReader.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="PagedList">
       <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
@@ -130,11 +136,13 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\BarcodeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ThuThuController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BarCode.cs" />
     <Compile Include="Models\ChiTietDonHang.cs">
       <DependentUpon>QuanLyThuVien.tt</DependentUpon>
     </Compile>
@@ -297,6 +305,9 @@
     <Content Include="Content\home\js\jquery.flexslider.js" />
     <Content Include="Content\home\js\jquery.prettyPhoto.js" />
     <Content Include="Content\home\js\jquery.quicksand.js" />
+    <Content Include="Content\jquery.webcam.min.js" />
+    <Content Include="Content\jscam.swf" />
+    <Content Include="Content\jscam_canvas_only.swf" />
     <Content Include="Content\js\bootstrap.js" />
     <Content Include="Content\js\bootstrap.min.js" />
     <Content Include="Content\js\jquery.js" />
@@ -546,6 +557,12 @@
     <Content Include="Views\ThuThu\KQTKiem.cshtml" />
     <Content Include="Views\ThuThu\chitietDGia.cshtml" />
     <Content Include="Views\ThuThu\capnhatAnh.cshtml" />
+    <Content Include="Views\Barcode\Index.cshtml" />
+    <Content Include="Views\Barcode\GetStatus.cshtml" />
+    <Content Include="Views\Barcode\CreateBarCodeView.cshtml" />
+    <Content Include="Views\Barcode\GetBarCodeView.cshtml" />
+    <Content Include="Views\Barcode\GetBarCodeView_Camera.cshtml" />
+    <Content Include="Views\Barcode\GetBarCodeView_File.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

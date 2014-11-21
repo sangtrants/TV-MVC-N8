@@ -101,7 +101,8 @@ else
                     @item.LoaiND
                 </td>
                 <td style="width:120px">
-                    <img style="width:118px; height:118px" src="@Url.Content(@item.AnhDaiDien)"/>
+
+                    <img style="width:118px; height:118px" src="@item.AnhDaiDien"/>
                 </td>
                 <td>
                     @Html.ActionLink("Chỉnh Sửa", "suadg", new { id = item.MaNguoiDung }) |
