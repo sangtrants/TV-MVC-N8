@@ -72,6 +72,7 @@
     <EntitySetMapping Name="NguoiDungs">
       <EntityTypeMapping TypeName="QuanLyThuVienModel.NguoiDung">
         <MappingFragment StoreEntitySet="NguoiDung">
+          <ScalarProperty Name="NgayDangKy" ColumnName="NgayDangKy" />
           <ScalarProperty Name="MaNguoiDung" ColumnName="MaNguoiDung" />
           <ScalarProperty Name="HoTen" ColumnName="HoTen" />
           <ScalarProperty Name="SoCMND" ColumnName="SoCMND" />

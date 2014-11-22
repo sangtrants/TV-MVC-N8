@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using QuanLyThuVien_N8.Models;
 
 namespace QuanLyThuVien_N8.Controllers
 {

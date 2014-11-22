@@ -143,6 +143,7 @@
     <Property Name="LoaiND" Type="nvarchar" MaxLength="20" />
     <Property Name="TenDangNhap" Type="nvarchar" MaxLength="30" />
     <Property Name="MatKhau" Type="nvarchar" MaxLength="30" />
+    <Property Name="NgayDangKy" Type="date" />
   </EntityType>
   <EntityType Name="NhanVien">
     <Key>
@@ -190,7 +191,7 @@
     <Property Name="NgayMuon" Type="datetime" />
     <Property Name="NgayTra" Type="datetime" />
     <Property Name="SoLuongSach" Type="int" />
-    <Property Name="TinhTrangMuon" Type="bit" />
+    <Property Name="TinhTrangMuon" Type="int" />
   </EntityType>
   <EntityType Name="QuyDinhPhat">
     <Key>

@@ -154,6 +154,7 @@
     <Property Name="MatKhau" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="Gopies" Relationship="QuanLyThuVienModel.fk_Gopy_NguoiDung" FromRole="NguoiDung" ToRole="GopY" />
     <NavigationProperty Name="PhieuMuons" Relationship="QuanLyThuVienModel.fk_PhieuMuon_NguoiDung" FromRole="NguoiDung" ToRole="PhieuMuon" />
+    <Property Type="DateTime" Name="NgayDangKy" Precision="0" />
   </EntityType>
   <EntityType Name="NhanVien">
     <Key>
@@ -207,7 +208,7 @@
     <Property Name="NgayMuon" Type="DateTime" Precision="3" />
     <Property Name="NgayTra" Type="DateTime" Precision="3" />
     <Property Name="SoLuongSach" Type="Int32" />
-    <Property Name="TinhTrangMuon" Type="Boolean" />
+    <Property Name="TinhTrangMuon" Type="Int32" />
     <NavigationProperty Name="ChiTietPhieuMuons" Relationship="QuanLyThuVienModel.fk_CtPhieuMuon_PhieuMuon" FromRole="PhieuMuon" ToRole="ChiTietPhieuMuon" />
     <NavigationProperty Name="NguoiDung" Relationship="QuanLyThuVienModel.fk_PhieuMuon_NguoiDung" FromRole="PhieuMuon" ToRole="NguoiDung" />
     <NavigationProperty Name="NhanVien1" Relationship="QuanLyThuVienModel.fk_PhieuMuon_NhanVien" FromRole="PhieuMuon" ToRole="NhanVien" />
