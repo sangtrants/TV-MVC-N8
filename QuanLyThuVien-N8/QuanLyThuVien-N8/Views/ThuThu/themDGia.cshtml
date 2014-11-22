@@ -1,0 +1,27 @@
+﻿@model QuanLyThuVien_N8.Models.NguoiDung
+
+@{
+    ViewBag.Title = "Thêm Người Dùng";
+    Layout = "~/Views/Shared/_Layout_admin.cshtml";
+}
+
+<h2>Thêm Độc Giả</h2>
+<form action="/thuthu/themdg" method="post">
+    <p>Họ Tên:</p> <input type="text" name="hoten" /><br />
+    <p>CMND:</p> <input type="text" name="cmnd" /><br />
+    <p>Ngày Sinh (mm/dd/yyyy):</p> <input type="text" name="ngsinh" /><br />
+    <p>MSSV / MSCB:</p> <input type="text" name="mssv" /><br />
+    <p>Ngày Hết Hạn (mm/dd/yyyy): </p> <input type="text" name="ngayhh" /><br />
+    <p>Loại Người Dùng:</p> <select name="loaingdung">
+                                <option value="Sinh Viên Trường">Sinh Viên Trường</option>
+                                <option value="Cán Bộ Trường">Cán Bộ Trường</option>
+                                <option value="Sinh Viên Trường Khác">Sinh Viên Trường Khác</option>
+                                <option value="Cán Bộ Trường Khác">Cán Bộ Trường Khác</option>
+                            </select><br /><br />
+    <p>Tên Đăng Nhập:</p> <input type="text" name="tendn" /><br />
+    <p>Mật Khẩu:</p> <input type="text" name="mkhau" /><br /><br />
+    <p><input type="submit" value="Thêm" /></p>
+</form>
+<p>
+    @Html.ActionLink("Về trang tìm kiếm", "QLDGia")
+</p>

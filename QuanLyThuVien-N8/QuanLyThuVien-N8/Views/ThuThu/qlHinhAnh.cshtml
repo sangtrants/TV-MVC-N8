@@ -1,0 +1,52 @@
+﻿@model IEnumerable<QuanLyThuVien_N8.Models.NguoiDung>
+
+@{
+    ViewBag.Title = "qlHinhAnh";
+    Layout = "~/Views/Shared/_Layout_admin.cshtml";
+}
+
+<h2>Quản Lý Hình Ảnh</h2>
+
+<p>
+    @Html.ActionLink("Thêm Người Dùng", "themDGia")
+</p>
+
+
+<table>
+    <tr>
+        <th>
+            Họ Tên
+        </th>
+        <th>
+            Tài Khoản
+        </th>
+        <th>
+            Ảnh Đại Diện
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td style="width:150px">
+                @item.HoTen
+            </td>
+            <td style="width:200px">
+                @item.TenDangNhap
+            </td>
+            <td style="width:120px">
+                <img style="width:118px; height:118px" src="@Url.Content(@item.AnhDaiDien)" />
+            </td>
+            <td>
+                @Html.ActionLink("Cập nhật hình ảnh", "capnhatAnh", new { id = item.TenDangNhap })|
+                @Html.ActionLink("Chi Tiết", "chitietDGia", new { id = item.MaNguoiDung })
+            </td>
+        </tr>
+    }
+</table>
+<p>
+    @Html.ActionLink("Về trang tìm kiếm", "QLDGia")
+</p>
+
+
