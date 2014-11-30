@@ -41,6 +41,7 @@
   <ItemGroup>
     <Reference Include="DotNet.Highcharts">
       <HintPath>..\packages\DotNet.Highcharts.4.0\lib\DotNet.Highcharts.dll</HintPath>
+    </Reference>
     <Reference Include="BarcodeLib.Barcode.ASP.NET">
       <HintPath>..\..\..\..\..\Downloads\QuanLyThuVien-N8\QuanLyThuVien-N8\bin\BarcodeLib.Barcode.ASP.NET.dll</HintPath>
     </Reference>

@@ -31,6 +31,7 @@ namespace QuanLyThuVien_N8.Models
         public string MatKhau { get; set; }
         public Nullable<System.DateTime> NgayDangKy { get; set; }
         public string AnhDaiDien { get; set; }
+        public Nullable<int> DeleteFlag { get; set; }
 
         public virtual ICollection<GopY> Gopies { get; set; }
         public virtual ICollection<PhieuMuon> PhieuMuons { get; set; }

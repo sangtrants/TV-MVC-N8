@@ -28,6 +28,7 @@ namespace QuanLyThuVien_N8.Models
         public string SDT { get; set; }
         public string TenDangNhap { get; set; }
         public string MatKhau { get; set; }
+        public Nullable<int> DeleteFlag { get; set; }
     
         public virtual ICollection<DonHang> DonHangs { get; set; }
         public virtual ICollection<PhieuMuon> PhieuMuons { get; set; }

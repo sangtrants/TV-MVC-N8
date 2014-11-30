@@ -25,6 +25,7 @@ namespace QuanLyThuVien_N8.Models
         public Nullable<System.DateTime> NgayTra { get; set; }
         public Nullable<System.DateTime> NgayMuon { get; set; }
         public Nullable<int> LanMuon { get; set; }
+        public Nullable<int> DeleteFlag { get; set; }
     
         public virtual PhieuMuon PhieuMuon { get; set; }
         public virtual Sach Sach { get; set; }

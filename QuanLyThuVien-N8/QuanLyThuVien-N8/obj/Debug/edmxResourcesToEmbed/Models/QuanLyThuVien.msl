@@ -4,6 +4,7 @@
     <EntitySetMapping Name="ChiTietDonHangs">
       <EntityTypeMapping TypeName="QuanLyThuVienModel.ChiTietDonHang">
         <MappingFragment StoreEntitySet="ChiTietDonHang">
+          <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
           <ScalarProperty Name="MaChiTietDonHang" ColumnName="MaChiTietDonHang" />
           <ScalarProperty Name="MaDonHang" ColumnName="MaDonHang" />
           <ScalarProperty Name="Stt" ColumnName="Stt" />
@@ -29,6 +30,7 @@
     <EntitySetMapping Name="ChiTietPhieuMuons">
       <EntityTypeMapping TypeName="QuanLyThuVienModel.ChiTietPhieuMuon">
         <MappingFragment StoreEntitySet="ChiTietPhieuMuon">
+          <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
           <ScalarProperty Name="MaChiTietPhieuMuon" ColumnName="MaChiTietPhieuMuon" />
           <ScalarProperty Name="MaSach" ColumnName="MaSach" />
           <ScalarProperty Name="MaPhieuMuon" ColumnName="MaPhieuMuon" />
@@ -41,6 +43,7 @@
     <EntitySetMapping Name="DanhMucs">
       <EntityTypeMapping TypeName="QuanLyThuVienModel.DanhMuc">
         <MappingFragment StoreEntitySet="DanhMuc">
+          <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
           <ScalarProperty Name="MaDanhMuc" ColumnName="MaDanhMuc" />
           <ScalarProperty Name="TenDanhMuc" ColumnName="TenDanhMuc" />
         </MappingFragment>
@@ -49,6 +52,7 @@
     <EntitySetMapping Name="DonHangs">
       <EntityTypeMapping TypeName="QuanLyThuVienModel.DonHang">
         <MappingFragment StoreEntitySet="DonHang">
+          <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
           <ScalarProperty Name="MaDonHang" ColumnName="MaDonHang" />
           <ScalarProperty Name="TongTien" ColumnName="TongTien" />
           <ScalarProperty Name="NgayMua" ColumnName="NgayMua" />
@@ -56,22 +60,11 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Gopies">
-      <EntityTypeMapping TypeName="QuanLyThuVienModel.GopY">
-        <MappingFragment StoreEntitySet="GopY">
-          <ScalarProperty Name="MaGopY" ColumnName="MaGopY" />
-          <ScalarProperty Name="NguoiGopY" ColumnName="NguoiGopY" />
-          <ScalarProperty Name="TimeGopY" ColumnName="TimeGopY" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="NguoiDungGopY" ColumnName="NguoiDungGopY" />
-          <ScalarProperty Name="NoiDungGopY" ColumnName="NoiDungGopY" />
-          <ScalarProperty Name="DaXem" ColumnName="DaXem" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="NguoiDungs">
       <EntityTypeMapping TypeName="QuanLyThuVienModel.NguoiDung">
         <MappingFragment StoreEntitySet="NguoiDung">
+          <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
+          <ScalarProperty Name="AnhDaiDien" ColumnName="AnhDaiDien" />
           <ScalarProperty Name="NgayDangKy" ColumnName="NgayDangKy" />
           <ScalarProperty Name="MaNguoiDung" ColumnName="MaNguoiDung" />
           <ScalarProperty Name="HoTen" ColumnName="HoTen" />
@@ -88,6 +81,7 @@
     <EntitySetMapping Name="NhanViens">
       <EntityTypeMapping TypeName="QuanLyThuVienModel.NhanVien">
         <MappingFragment StoreEntitySet="NhanVien">
+          <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
           <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
           <ScalarProperty Name="HoTen" ColumnName="HoTen" />
           <ScalarProperty Name="CMND" ColumnName="CMND" />
@@ -102,6 +96,7 @@
     <EntitySetMapping Name="NhaXuatBans">
       <EntityTypeMapping TypeName="QuanLyThuVienModel.NhaXuatBan">
         <MappingFragment StoreEntitySet="NhaXuatBan">
+          <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
           <ScalarProperty Name="MaNhaXuatBan" ColumnName="MaNhaXuatBan" />
           <ScalarProperty Name="TenNhaXuatBan" ColumnName="TenNhaXuatBan" />
           <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
@@ -115,25 +110,13 @@
     <EntitySetMapping Name="Phats">
       <EntityTypeMapping TypeName="QuanLyThuVienModel.Phat">
         <MappingFragment StoreEntitySet="Phat">
+          <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
           <ScalarProperty Name="MaPhat" ColumnName="MaPhat" />
           <ScalarProperty Name="ChiTietPhieuMuon" ColumnName="ChiTietPhieuMuon" />
           <ScalarProperty Name="QuyDinhPhat" ColumnName="QuyDinhPhat" />
           <ScalarProperty Name="NgayNopPhat" ColumnName="NgayNopPhat" />
           <ScalarProperty Name="SoTienNop" ColumnName="SoTienNop" />
           <ScalarProperty Name="NguoiThu" ColumnName="NguoiThu" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="PhieuMuons">
-      <EntityTypeMapping TypeName="QuanLyThuVienModel.PhieuMuon">
-        <MappingFragment StoreEntitySet="PhieuMuon">
-          <ScalarProperty Name="MaPhieuMuon" ColumnName="MaPhieuMuon" />
-          <ScalarProperty Name="NhanVien" ColumnName="NhanVien" />
-          <ScalarProperty Name="NguoiMuon" ColumnName="NguoiMuon" />
-          <ScalarProperty Name="NgayMuon" ColumnName="NgayMuon" />
-          <ScalarProperty Name="NgayTra" ColumnName="NgayTra" />
-          <ScalarProperty Name="SoLuongSach" ColumnName="SoLuongSach" />
-          <ScalarProperty Name="TinhTrangMuon" ColumnName="TinhTrangMuon" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -146,37 +129,67 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Saches">
-      <EntityTypeMapping TypeName="QuanLyThuVienModel.Sach">
-        <MappingFragment StoreEntitySet="Sach">
-          <ScalarProperty Name="MaSach" ColumnName="MaSach" />
-          <ScalarProperty Name="TenSach" ColumnName="TenSach" />
-          <ScalarProperty Name="NhanDeChinh" ColumnName="NhanDeChinh" />
-          <ScalarProperty Name="NhanDePhu" ColumnName="NhanDePhu" />
-          <ScalarProperty Name="NamXuatBan" ColumnName="NamXuatBan" />
-          <ScalarProperty Name="TinhTrangSach" ColumnName="TinhTrangSach" />
-          <ScalarProperty Name="TinhTrangMuon" ColumnName="TinhTrangMuon" />
-          <ScalarProperty Name="GiaSach" ColumnName="GiaSach" />
-          <ScalarProperty Name="KichThuoc" ColumnName="KichThuoc" />
-          <ScalarProperty Name="NgonNgu" ColumnName="NgonNgu" />
-          <ScalarProperty Name="Cuon" ColumnName="Cuon" />
-          <ScalarProperty Name="Tap" ColumnName="Tap" />
-          <ScalarProperty Name="XemTruoc" ColumnName="XemTruoc" />
-          <ScalarProperty Name="TomTat" ColumnName="TomTat" />
-          <ScalarProperty Name="TacGia" ColumnName="TacGia" />
-          <ScalarProperty Name="NhaXuatBan" ColumnName="NhaXuatBan" />
-          <ScalarProperty Name="MaDanhMuc" ColumnName="MaDanhMuc" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="TacGias">
       <EntityTypeMapping TypeName="QuanLyThuVienModel.TacGia">
         <MappingFragment StoreEntitySet="TacGia">
+          <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
           <ScalarProperty Name="MaTacGia" ColumnName="MaTacGia" />
           <ScalarProperty Name="TenTacGia" ColumnName="TenTacGia" />
           <ScalarProperty Name="QuocTich" ColumnName="QuocTich" />
           <ScalarProperty Name="NamSinh" ColumnName="NamSinh" />
           <ScalarProperty Name="TenVietTat" ColumnName="TenVietTat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhieuMuons">
+      <EntityTypeMapping TypeName="QuanLyThuVienModel.PhieuMuon">
+        <MappingFragment StoreEntitySet="PhieuMuon">
+          <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
+          <ScalarProperty Name="TinhTrangMuon" ColumnName="TinhTrangMuon" />
+          <ScalarProperty Name="SoLuongSach" ColumnName="SoLuongSach" />
+          <ScalarProperty Name="NgayTra" ColumnName="NgayTra" />
+          <ScalarProperty Name="NgayMuon" ColumnName="NgayMuon" />
+          <ScalarProperty Name="NguoiMuon" ColumnName="NguoiMuon" />
+          <ScalarProperty Name="NhanVien" ColumnName="NhanVien" />
+          <ScalarProperty Name="MaPhieuMuon" ColumnName="MaPhieuMuon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Saches">
+      <EntityTypeMapping TypeName="QuanLyThuVienModel.Sach">
+        <MappingFragment StoreEntitySet="Sach">
+          <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
+          <ScalarProperty Name="MaDanhMuc" ColumnName="MaDanhMuc" />
+          <ScalarProperty Name="NhaXuatBan" ColumnName="NhaXuatBan" />
+          <ScalarProperty Name="TacGia" ColumnName="TacGia" />
+          <ScalarProperty Name="TomTat" ColumnName="TomTat" />
+          <ScalarProperty Name="XemTruoc" ColumnName="XemTruoc" />
+          <ScalarProperty Name="Tap" ColumnName="Tap" />
+          <ScalarProperty Name="Cuon" ColumnName="Cuon" />
+          <ScalarProperty Name="NgonNgu" ColumnName="NgonNgu" />
+          <ScalarProperty Name="KichThuoc" ColumnName="KichThuoc" />
+          <ScalarProperty Name="GiaSach" ColumnName="GiaSach" />
+          <ScalarProperty Name="TinhTrangMuon" ColumnName="TinhTrangMuon" />
+          <ScalarProperty Name="TinhTrangSach" ColumnName="TinhTrangSach" />
+          <ScalarProperty Name="NamXuatBan" ColumnName="NamXuatBan" />
+          <ScalarProperty Name="NhanDePhu" ColumnName="NhanDePhu" />
+          <ScalarProperty Name="NhanDeChinh" ColumnName="NhanDeChinh" />
+          <ScalarProperty Name="TenSach" ColumnName="TenSach" />
+          <ScalarProperty Name="MaSach" ColumnName="MaSach" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gopies">
+      <EntityTypeMapping TypeName="QuanLyThuVienModel.GopY">
+        <MappingFragment StoreEntitySet="GopY">
+          <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
+          <ScalarProperty Name="DaXem" ColumnName="DaXem" />
+          <ScalarProperty Name="NoiDungGopY" ColumnName="NoiDungGopY" />
+          <ScalarProperty Name="NguoiDungGopY" ColumnName="NguoiDungGopY" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="TimeGopY" ColumnName="TimeGopY" />
+          <ScalarProperty Name="NguoiGopY" ColumnName="NguoiGopY" />
+          <ScalarProperty Name="MaGopY" ColumnName="MaGopY" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

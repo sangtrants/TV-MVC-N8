@@ -20,6 +20,7 @@ namespace QuanLyThuVien_N8.Models
         public Nullable<System.DateTime> NgayNopPhat { get; set; }
         public Nullable<double> SoTienNop { get; set; }
         public Nullable<int> NguoiThu { get; set; }
+        public Nullable<int> DeleteFlag { get; set; }
     
         public virtual ChiTietPhieuMuon ChiTietPhieuMuon1 { get; set; }
         public virtual QuyDinhPhat QuyDinhPhat1 { get; set; }

@@ -9,7 +9,6 @@
         <EntityTypeShape EntityType="QuanLyThuVienModel.ChiTietPhieuMuon" Width="1.5" PointX="8.25" PointY="5.375" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLyThuVienModel.DanhMuc" Width="1.5" PointX="3.75" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLyThuVienModel.DonHang" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyThuVienModel.GopY" Width="1.5" PointX="6" PointY="18.5" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLyThuVienModel.NguoiDung" Width="1.5" PointX="3.75" PointY="14.25" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLyThuVienModel.NhanVien" Width="1.5" PointX="1.5" PointY="10.375" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLyThuVienModel.NhaXuatBan" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
@@ -20,7 +19,6 @@
         <AssociationConnector Association="QuanLyThuVienModel.fk_ChiTietDonHang_NXB" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLyThuVienModel.fk_Phat_CTPhieuMuon" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLyThuVienModel.fk_DonHang_NhanVien" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLyThuVienModel.fk_Gopy_NguoiDung" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLyThuVienModel.fk_Phat_QDPhat" ManuallyRouted="false" />
         <EntityTypeShape EntityType="QuanLyThuVienModel.PhieuMuon" Width="1.5" PointX="7.1611606009123658" PointY="27.683417213933271" />
         <EntityTypeShape EntityType="QuanLyThuVienModel.Sach" Width="1.5" PointX="0.83304061034370236" PointY="30.465169756889889" />
@@ -31,6 +29,8 @@
         <AssociationConnector Association="QuanLyThuVienModel.fk_PhieuMuon_NhanVien" />
         <AssociationConnector Association="QuanLyThuVienModel.fk_Sach_NhaXuatBan" />
         <AssociationConnector Association="QuanLyThuVienModel.fk_Sach_TacGia" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.GopY" Width="1.5" PointX="8.022809987898361" PointY="18.477592238447439" />
+        <AssociationConnector Association="QuanLyThuVienModel.fk_Gopy_NguoiDung" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

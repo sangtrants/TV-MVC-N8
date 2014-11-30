@@ -27,6 +27,7 @@ namespace QuanLyThuVien_N8.Models
         public string SoDienThoai { get; set; }
         public string Email { get; set; }
         public string Website { get; set; }
+        public Nullable<int> DeleteFlag { get; set; }
     
         public virtual ICollection<ChiTietDonHang> ChiTietDonHangs { get; set; }
         public virtual ICollection<Sach> Saches { get; set; }

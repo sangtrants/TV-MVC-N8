@@ -21,6 +21,7 @@ namespace QuanLyThuVien_N8.Models
     
         public int MaDanhMuc { get; set; }
         public string TenDanhMuc { get; set; }
+        public Nullable<int> DeleteFlag { get; set; }
     
         public virtual ICollection<Sach> Saches { get; set; }
     }

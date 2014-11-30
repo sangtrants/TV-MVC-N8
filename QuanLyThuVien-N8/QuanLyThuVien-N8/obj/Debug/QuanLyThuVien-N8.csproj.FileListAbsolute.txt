@@ -91,3 +91,4 @@ C:\Users\van\Google Drive\PTHTTTHD\Ex\Code\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuV
 C:\Users\van\Google Drive\PTHTTTHD\Ex\Code\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\obj\Debug\QuanLyThuVien-N8.csprojResolveAssemblyReference.cache
 C:\Users\van\Google Drive\PTHTTTHD\Ex\Code\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\obj\Debug\QuanLyThuVien-N8.dll
 C:\Users\van\Google Drive\PTHTTTHD\Ex\Code\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\obj\Debug\QuanLyThuVien-N8.pdb
+C:\Users\K551\Documents\GitHub\TV-MVC-N8\QuanLyThuVien-N8\QuanLyThuVien-N8\bin\DotNet.Highcharts.dll

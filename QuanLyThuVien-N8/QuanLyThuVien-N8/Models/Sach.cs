@@ -36,6 +36,7 @@ namespace QuanLyThuVien_N8.Models
         public Nullable<int> TacGia { get; set; }
         public Nullable<int> NhaXuatBan { get; set; }
         public Nullable<int> MaDanhMuc { get; set; }
+        public Nullable<int> DeleteFlag { get; set; }
     
         public virtual ICollection<ChiTietPhieuMuon> ChiTietPhieuMuons { get; set; }
         public virtual DanhMuc DanhMuc { get; set; }

@@ -33,6 +33,7 @@ namespace QuanLyThuVien_N8.Models
         public Nullable<int> NhaXuatBan { get; set; }
         public Nullable<int> Cuon { get; set; }
         public Nullable<int> Tap { get; set; }
+        public Nullable<int> DeleteFlag { get; set; }
     
         public virtual DonHang DonHang { get; set; }
         public virtual NhaXuatBan NhaXuatBan1 { get; set; }

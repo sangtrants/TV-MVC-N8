@@ -20,7 +20,8 @@ namespace QuanLyThuVien_N8.Models
         public string Email { get; set; }
         public Nullable<int> NguoiDungGopY { get; set; }
         public string NoiDungGopY { get; set; }
-        public Nullable<bool> DaXem { get; set; }
+        public Nullable<int> DaXem { get; set; }
+        public Nullable<int> DeleteFlag { get; set; }
     
         public virtual NguoiDung NguoiDung { get; set; }
     }

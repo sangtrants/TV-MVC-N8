@@ -24,6 +24,7 @@ namespace QuanLyThuVien_N8.Models
         public string QuocTich { get; set; }
         public Nullable<System.DateTime> NamSinh { get; set; }
         public string TenVietTat { get; set; }
+        public Nullable<int> DeleteFlag { get; set; }
     
         public virtual ICollection<Sach> Saches { get; set; }
     }
