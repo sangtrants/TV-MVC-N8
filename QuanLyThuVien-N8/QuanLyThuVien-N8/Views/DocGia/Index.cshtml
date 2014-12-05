@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout_user.cshtml";
+}
+
+
+@if (Model.SoLuongDenHan >= 0)
+{
+    <h1>Bạn có @Model.SoLuongDenHan phiếu mượn đã đến hạn</h1>
+}

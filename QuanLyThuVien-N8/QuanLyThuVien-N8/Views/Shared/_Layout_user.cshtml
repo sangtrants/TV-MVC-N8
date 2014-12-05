@@ -218,10 +218,18 @@
                         <li class="divider"></li>
                         <li>
                             <a href="#">
+                                @if (@Session["SoLanDenHan"] != null)
+                                {
                                 <div>
-                                    <i class="fa fa-tasks fa-fw"></i> New Task
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                        <i class="fa fa-tasks fa-fw"></i> @Session["SoLanDenHan"] phiếu mượn đến hạn
                                 </div>
+                                }
+                                @if (@Session["SoLanDenHan"] == null)
+                                {
+                                <div>
+                                        <i class="fa fa-tasks fa-fw"></i> không có thông tin phiếu mượn đến hạn
+                                </div>
+                                }
                             </a>
                         </li>
                         <li class="divider"></li>
@@ -251,17 +259,18 @@
                     <ul class="dropdown-menu dropdown-user">
                         @if(Session["user"] != null)
                         {
-                            <li><a href="#"><i class="fa fa-user fa-fw"></i> @Session["user"]</a></li>
+                            <li>@Html.ActionLink(Session["user"].ToString(), "suadg", "Home", new { username = Session["user"]}, new { @class = "fa fa-user fa-fw" })</li>
                         }
                         @if(Session["user"] == null)
                         {
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        <li>
+                            <a href="#"><i class="fa fa-user fa-fw"></i> @Session["user"]</a>
                         </li>
                         }
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="/Home/Index"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li> @Html.ActionLink("Logout","Logout","Home",null,new { @class ="fa fa-gear fa-fw"})
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -287,18 +296,6 @@
                         <li>
                             @Html.ActionLink("Dashboard", "suadg", "Home", new { username = Session["user"]},new { @class="fa fa-dashboard fa-fw"});
           
-                        </li>
-                        <li>
-                            <a href="/ThuThu/getViewPieChart"><i class="fa fa-bar-chart-o fa-fw"></i> Thống kê</a>
-                        </li>
-                        <li>
-                            <a href="/ThuThu/QuanLySach"><i class="fa fa-table fa-fw"></i> Quản lý sách</a>
-                        </li>
-                        <li>
-                            <a href="/ThuThu/QLDGia"><i class="fa fa-edit fa-fw"></i>Quản lý độc giả</a>
-                        </li>
-                        <li>
-                            <a href="/Barcode/Index"> <i class="glyphicon glyphicon-euro"></i> BarCode</a>
                         </li>
                     </ul>
                 </div>

@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "SuaNhanVien";
+    Layout = "~/Views/Shared/_Layout_admin.cshtml";
+}
+
+<h2>Thông tin đọc giả</h2>
+@model QuanLyThuVien_N8.Models.NhanVien
+@using (Html.BeginForm("SuaNhanVien","Home",FormMethod.Post)) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Chỉnh sửa thông tin</legend>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.MaNhanVien, new { @type = "hidden"})
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HoTen)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HoTen)
+            @Html.ValidationMessageFor(model => model.HoTen)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CMND)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CMND)
+            @Html.ValidationMessageFor(model => model.CMND)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NgaySinh)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.NgaySinh, new {@type = "datetime"})
+            @Html.ValidationMessageFor(model => model.NgaySinh)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TenDangNhap)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TenDangNhap)
+            @Html.ValidationMessageFor(model => model.TenDangNhap)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MatKhau)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MatKhau)
+            @Html.ValidationMessageFor(model => model.MatKhau)
+        </div>
+        <p>
+            <input type="submit" class="btn btn-lg btn-success btn-block" value="Lưu" />
+        </p>
+    </fieldset>
+}

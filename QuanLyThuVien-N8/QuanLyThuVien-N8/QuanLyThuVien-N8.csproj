@@ -145,6 +145,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AccountModel.cs" />
     <Compile Include="Models\BarCode.cs" />
     <Compile Include="Models\ChiTietDonHang.cs">
       <DependentUpon>QuanLyThuVien.tt</DependentUpon>
@@ -608,6 +609,11 @@
     <Content Include="Views\Barcode\GetBarCodeView.cshtml" />
     <Content Include="Views\Barcode\GetBarCodeView_Camera.cshtml" />
     <Content Include="Views\Barcode\GetBarCodeView_File.cshtml" />
+    <Content Include="Views\DocGia\SuaDocGia.cshtml" />
+    <Content Include="Views\Shared\_Layout_user.cshtml" />
+    <Content Include="Views\Home\SuaNhanVien.cshtml" />
+    <Content Include="Views\DocGia\Index.cshtml" />
+    <Content Include="Views\DocGia\CapNhatAnh.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
