@@ -30,8 +30,11 @@ namespace QuanLyThuVien_N8.Controllers
                 NhanVien em = (from use in data.NhanViens
                                where use.TenDangNhap == model.UserName && use.MatKhau == model.Password
                                select use).FirstOrDefault();
-                Session["user"] = em.TenDangNhap;
-                return RedirectToAction("Index", "ThuThu");
+                if (em != null)
+                {
+                    Session["user"] = em.TenDangNhap;
+                    return RedirectToAction("Index", "ThuThu");
+                }
             }
             
             if (user != null)
@@ -47,6 +50,14 @@ namespace QuanLyThuVien_N8.Controllers
                 }
                 Session["user"] = user.TenDangNhap;
                 Session["SoLanDenHan"] = model.SoLuongDenHan;
+                if (model.RememberMe == true)
+                {
+                    HttpCookie myCookie = new HttpCookie("UserLogin");
+                    myCookie["username"] = model.UserName;
+                    myCookie["pass"] = model.Password;
+                    myCookie.Expires = DateTime.Now.AddDays(1d);
+                    Response.Cookies.Add(myCookie);
+                }
                 return View("~/Views/DocGia/Index.cshtml",model);
             }
             else
@@ -82,27 +93,31 @@ namespace QuanLyThuVien_N8.Controllers
             NhanVien nv = (from ngds in data.NhanViens
                            where ngds.TenDangNhap == username
                            select ngds).FirstOrDefault();
-            if(ngd != null)
+            if (ngd != null)
                 return View("~/Views/DocGia/SuaDocGia.cshtml", ngd);
-            else
+            else if (nv != null)
                 return View("~/Views/Home/SuaNhanVien.cshtml", nv);
+            else
+                return View("~/Views/Home/Index.cshtml"); ;
         }
         
         //Cập nhật thông tin đọc giả (Từ)
         public ActionResult SuaDocGia(FormCollection f)
         {
             int MaNguoiDung = int.Parse(f["MaNguoiDung"]);
+            DateTime NgaySinh;
             QuanLyThuVienEntities data = new QuanLyThuVienEntities();
             NguoiDung ngd = (from ngds in data.NguoiDungs
                              where ngds.MaNguoiDung == MaNguoiDung
                              select ngds).First();
             ngd.HoTen = f["HoTen"];
             ngd.SoCMND = f["SoCMND"];
-            ngd.TenDangNhap = f["TenDangNhap"];
-            ngd.NgaySinh = DateTime.Parse(f["NgaySinh"]);
-            ngd.MSSV = f["MSSV"];
-            ngd.LoaiND = f["LoaiND"];
             ngd.MatKhau = f["MatKhau"];
+            if (DateTime.TryParse(f["NgaySinh"], out NgaySinh))
+            {
+                ngd.NgaySinh = DateTime.Parse(f["NgaySinh"]);
+            }
+            
             data.SaveChanges();
             return RedirectToAction("suadg", "Home", new { username = f["TenDangNhap"]});
         }
@@ -111,6 +126,7 @@ namespace QuanLyThuVien_N8.Controllers
         public ActionResult SuaNhanVien(FormCollection f)
         {
             int MaNguoiDung = int.Parse(f["MaNhanVien"]);
+            DateTime NgaySinh;
             QuanLyThuVienEntities data = new QuanLyThuVienEntities();
             NhanVien ngd = (from ngds in data.NhanViens
                              where ngds.MaNhanVien == MaNguoiDung
@@ -118,7 +134,10 @@ namespace QuanLyThuVien_N8.Controllers
             ngd.HoTen = f["HoTen"];
             ngd.CMND = f["CMND"];
             ngd.TenDangNhap = f["TenDangNhap"];
-            ngd.NgaySinh = DateTime.Parse(f["NgaySinh"]);
+            if (DateTime.TryParse(f["NgaySinh"], out NgaySinh))
+            {
+                ngd.NgaySinh = DateTime.Parse(f["NgaySinh"]);
+            }
             ngd.MatKhau = f["MatKhau"];
             data.SaveChanges();
             return RedirectToAction("suadg", "Home", new { username = f["TenDangNhap"] });

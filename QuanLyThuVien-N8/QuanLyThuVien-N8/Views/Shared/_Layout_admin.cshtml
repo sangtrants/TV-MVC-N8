@@ -251,11 +251,12 @@
                     <ul class="dropdown-menu dropdown-user">
                         @if(Session["user"] != null)
                         {
-                            <li><a href="#"><i class="fa fa-user fa-fw"></i> @Session["user"]</a></li>
+                            <li>@Html.ActionLink(Session["user"].ToString(), "suadg", "Home", new { username = Session["user"]}, new { @class = "fa fa-user fa-fw" })</li>
                         }
                         @if(Session["user"] == null)
                         {
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        <li>
+                            <a href="#"><i class="fa fa-user fa-fw"></i> @Session["user"]</a>
                         </li>
                         }
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>

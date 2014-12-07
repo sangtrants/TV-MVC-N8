@@ -45,10 +45,32 @@
                     <div class="panel-body">
                         <form role="form" method="post" action="/Home/LoginValid">
                             <fieldset>
-                                <div class="form-group">
+                                @if (Request.Cookies["UserLogin"] != null)
+                                {
+                                    string username = Request.Cookies["UserLogin"]["username"];
+                                    string pass = Request.Cookies["UserLogin"]["pass"];
+                                    <div class="form-group">
+                                     @Html.LabelFor(m => m.UserName)
+                                     @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", @Value = username })
+                                     @Html.ValidationMessageFor(m => m.UserName)
+                                    </div>
+                                    <div class="form-group">
+                                    @Html.LabelFor(m => m.Password)
+                                    @Html.PasswordFor(m => m.Password, new { @class = "form-control", @Value = pass})
+                                    @Html.ValidationMessageFor(m => m.Password)
+                                    </div>
+                                    <div class="checkbox">
+                                    @Html.CheckBoxFor(m => m.RememberMe)
+                                    @Html.LabelFor(m => m.RememberMe, new { @class = "checkbox" })
+                                    </div>
+                                }
+                                @if (Request.Cookies["UserLogin"] == null)
+                                {
+                                    <div class="form-group">
                                      @Html.LabelFor(m => m.UserName)
                                      @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
                                      @Html.ValidationMessageFor(m => m.UserName)
+                                     </div>
                                 <div class="form-group">
                                     @Html.LabelFor(m => m.Password)
                                     @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
@@ -58,6 +80,8 @@
                                     @Html.CheckBoxFor(m => m.RememberMe)
                                     @Html.LabelFor(m => m.RememberMe, new { @class = "checkbox" })
                                 </div>
+                                }
+                                
                                 <!-- Change this to a button or input when using this as a form -->
                                 <input type="submit" class="btn btn-lg btn-success btn-block" value="Login" onclick="return check();">
                             </fieldset>
