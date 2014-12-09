@@ -55,7 +55,7 @@
             @Html.ValidationMessageFor(model => model.MatKhau)
         </div>
         <p>
-            <input type="submit" class="btn btn-lg btn-success btn-block" value="Lưu" />
+            <input type="submit" class="btn btn-lg btn-success btn-block" value="Lưu"  onclick ="return confirm('Do you really want to change?');" />
         </p>
     </fieldset>
 }

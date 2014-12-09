@@ -72,7 +72,7 @@
             
         </div>
 
-        <div>@Html.ActionLink("Cập nhật hình ảnh", "capnhatAnh", "Home", new { username = Model.TenDangNhap })</div>
+        <div>@Html.ActionLink("Cập nhật hình ảnh", "capnhatAnh", "Home", new { username = @Model.TenDangNhap },null)</div>
 
         <p>
             <input type="submit" class="btn btn-lg btn-success btn-block" value="Lưu" onclick ="return confirm('Do you really want to change?');"/>
